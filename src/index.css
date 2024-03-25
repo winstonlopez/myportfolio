@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Stick&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0A192F;
+}
+
+.nav-container {
+    @apply flex justify-between border-gray-200 h-14 p-2 sm:p-3 sm:mx-2 relative font-Inter;
+}
+.logo {
+    @apply hover:cursor-pointer text-secondary;
+}
+.menu-container {
+    @apply hidden sm:relative sm:flex sm:h-10 sm:bg-transparent sm:justify-between sm:items-center;
+    width: 420px;
+    color: #CCD6F6;
+    transition: height .1s linear
+}
+
+.menu {
+    @apply flex justify-center text-right hover:cursor-pointer sm:text-center hover:text-secondary hover:font-semibold;
+    width: 100px;
+}
+
+.resume-download {
+    @apply flex relative justify-center text-secondary border border-secondary rounded hover:cursor-pointer hover:font-semibold;
+    background-color: #0A192F;
+    width: 100px;
+    transition: .1s linear;
+}
+
+.resume-download:hover {
+    transform: translate(-3px, -3px);
+}
+
+
+
+.tag {
+    @apply flex justify-center items-center font-Inter gap-6 text-primary pt-40 lg:justify-start lg:ml-52;
+}
+
+.tag > .photo {
+    @apply h-56 w-56 mr-4 border-solid rounded-full bg-black overflow-hidden relative;
+}
+.photo > img {
+    @apply relative bottom-3 right-3 w-full;
+}
+.about {
+    @apply mr-10 container;
+}
+.name-about {
+    @apply font-bold text-sm;
+    color: #CCD6F6;
+}
+.about p:first-child {
+    @apply text-lg sm:text-xl;
+    color: #53D3B9;
+}
+.about > .name-about {
+    @apply text-5xl py-3 sm:text-6xl lg:text-8xl;
+}
+.about p:nth-child(3){
+    @apply text-third-100 text-3xl sm:text-5xl lg:text-6xl;
+}
+.about p:last-child {
+    @apply text-third-200 py-2;
+}
+
+.about-page {
+    @apply lg:pt-14 lg:px-14 flex items-start justify-evenly gap-8;
+}
+
+
+.about-description {
+    @apply container
+}
+.whole-description {
+    @apply flex gap-10;
+}
+.text-description {
+    @apply flex flex-col gap-5;
+}
+
+.about-description > div {
+    @apply text-third-100 text-justify text-lg py-2;
+}
+
+
+.about-description > p:first-child {
+    @apply text-primary text-2xl py-4;
+}
+
+.languages {
+    @apply text-secondary flex flex-wrap mt-4 gap-2;
+}
+.languages p {
+    min-width: 200px
+}
+
+
+
+.backshadow {
+    @apply bg-secondary rounded relative;
+}
+
+.backshadow-image {
+    @apply relative hidden sm:block rounded;
+    border: 1px solid #53D3B9;
+    height: 300px;
+    min-width: 250px;
+    transition: .1s linear;
+}
+
+.photo-square {
+    @apply w-full h-full bg-secondary absolute;
+    border: 1px solid #53D3B9;
+    top: -5px;
+    left: -5px;
+    transition: .1s linear;
+}
+.move-photo {
+    transform: translate(-5px, -5px);
+}
+.move-shadow {
+    transform: translate(5px, 5px);
+}
+
+
+
+
+@media only screen and (max-width : 640px){
+    .small-nav {
+        @apply absolute top-12 bg-menu text-gray-100 px-5 py-2 gap-4;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: calc(100% + 16px);
+        left: -8px;
+    }
+
+    .about-page {
+        @apply px-3 py-8;
+    }
+
+    .photo {
+        display: none;
+    }
+    .photo-square, .backshadow-image {
+        display: none;
+    }
+    .about-description {
+        max-width: none;
+    }
+}
