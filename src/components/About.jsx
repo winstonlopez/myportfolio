@@ -4,43 +4,42 @@ const About = () => {
 
     const photoRef = useRef()
     const backgroundRef = useRef()
+    const photoContainer = useRef()
 
-    const handleHover = () => {
-        photoRef.current.classList.toggle('move-photo')
-    }
-    const handleLeave = () => {
-        photoRef.current.classList.toggle('move-photo')
-    }
+
+
+    // const handleHover = () => {
+    //     photoRef.current.classList.toggle('move-photo')
+    //     backgroundRef.current.classList.toggle('move-frame')
+    // }
+    // const handleLeave = () => {
+    //     photoRef.current.classList.toggle('move-photo')
+    //     backgroundRef.current.classList.toggle('move-frame')
+    // }
 
 
     return ( 
-        <div className="about-page">
+        <div className="about-page" id='about-page'>
             <div className="about-description">
                 <p><span>About Me</span>
                     <span className="line"></span>
                 </p>
                 <div className="whole-description">
                     <div className="text-description">
-                        <p>Hello!, my name is Winston and I enjoy creating things for the web.
-                            My interest in programming started when I tried to automate some of the processes I do as a quality control in <span className="text-secondary">eagleview</span> - a company that provides data analytics and aerial imagery.
+                        <p>Hello!, my name is Winston and I enjoy creating things for the web. After having a degree in electronics and communications engineering, I started working in <span className="text-secondary">eagleview</span> - a company that provides data analytics and aerial imagery,
+                            where my interest in programming started when I tried to automate some of the processes I do as a quality control.
                         </p>
-                        <p>
-                            Here are the technologies that I have learned while building some of my porjects
-                        </p>
-                        <div className="languages">
-                            <p>JavaScript</p>
-                            <p>React</p>
-                            <p>Node.js</p>
-                            <p>TypeScript</p>
-                            <p>Express</p>
-                            <p>Tailwind CSS</p>
-                        </div>
+                        <p>I realized I could build more fun and useful stuff, and learned Web development technologies on my own, solving problems I encounter along the way.</p>
+                        <p>Outside programming, I am a father, enjoying quality time with my kids, biking and running.</p>
+
+                        
                     </div>
 
-                    <div className="backshadow-image" ref={backgroundRef}>
-                        <div className="photo-square" ref={photoRef} onMouseOver={handleHover} onMouseLeave={handleLeave}>
+                    <div className="photo-container" ref={photoContainer}>
+                        <div className="photo-square" ref={photoRef}>
                         {/* <img src="/images/myphoto.jpg" alt="" /> */}
                         </div>
+                        <div className="backframe" ref={backgroundRef}></div>
                      </div>
                 </div>
 

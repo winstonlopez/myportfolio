@@ -8,7 +8,8 @@ export default {
     extend: {
       fontFamily: {
         stick: ["Stick"],
-        Inter: ["Inter"]
+        Inter: ["Inter"],
+        Roboto: ["Roboto"]
       },
       colors: {
         primary: '#CCD6F6',
@@ -17,7 +18,8 @@ export default {
           100: '#8892B0',
           200: '#888888'
         },
-        menu: "#112240"
+        menu: "#112240",
+        background: '#0A192F'
       }
     },
   },
