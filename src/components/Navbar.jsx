@@ -1,14 +1,12 @@
 import { useRef } from "react"
-import { useNavigate, Link } from "react-router-dom"
 
 const Navbar = () => {
 
-    const navigate = useNavigate()
+ 
 
     const navRef = useRef()
 
-    const menuHandler = (menu) => {
-        navigate(`/${menu}`)
+    const menuHandler = () => {
         navRef.current.classList.toggle('small-nav')
     }
 
@@ -20,14 +18,14 @@ const Navbar = () => {
 
     return ( 
 
-        <div className="nav-container">
-            <Link to='/'><div className="logo">Winston Lopez</div></Link>
+        <div className="nav-container" id='nav-container'>
+            <a href='#home'><div className="logo">Winston Lopez</div></a>
             <nav className="menu-container" ref={navRef}>
-                <p onClick={() => menuHandler('about')} className="menu">About</p>
-                <p onClick={() => menuHandler('projects')} className="menu">Projects</p>
-                <p onClick={() => menuHandler('contact')} className="menu">Contact</p>
+                <a href="#about-page"><p className="menu" onClick={menuHandler}>About</p></a>
+                <a href="#projects"><p className="menu" onClick={menuHandler}>Projects</p></a>
+                <a><p onClick={menuHandler} className="menu">Contact</p></a>
                 <div className="backshadow">
-                    <div className="resume-download">Resume</div>
+                    <div className="resume-download" onClick={menuHandler}>Resume</div>
                 </div>
             </nav>
             <img src="/buttons/bx-menu.svg" alt="menu" className="sm:hidden hover:cursor-pointer" onClick={showNavBar}/>
