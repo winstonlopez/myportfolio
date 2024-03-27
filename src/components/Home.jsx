@@ -36,6 +36,7 @@ const Home = () => {
                 <div className="languages" ref={techNameRef}>
                                 <p><img src="/logos/html-logo.svg" alt="" /><span className="hide">HTML</span></p>
                                 <p><img src="/logos/javascript.svg" alt="" /><span className="hide">Javascript</span></p>
+                                <p><img src="/logos/css.svg" alt="" /><span className="hide">CSS</span></p>
                                 <p><img src="/logos/bxl-react.svg" alt="react" /><span className="hide">React</span></p>
                                 <p><img src="/logos/nodejs.svg" alt="node" /><span className="hide">Node.js</span></p>
                                 <p><img src="/logos/mongodb.svg" alt="node" /><span className="hide">MongoDB</span></p>

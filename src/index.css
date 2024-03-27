@@ -22,17 +22,18 @@ body {
 
 .main {
     scroll-behavior: smooth;
-    transition: .5s linear;
+    transition: .2s linear;
     width: 100%;
 }
 
 .nav-container {
     @apply flex justify-between items-center bg-background border-gray-200 h-20 p-2 sm:px-8  font-Inter fixed w-full top-0 left-0;
+    color: #CCD6F6;
     transition: .2s linear;
     z-index: 3;
 }
 .logo {
-    @apply hover:cursor-pointer text-secondary;
+    @apply hover:cursor-pointer text-secondary flex items-center gap-5;
 }
 
 .hide-nav {
@@ -40,9 +41,8 @@ body {
 }
 .menu-container {
     @apply hidden sm:relative sm:flex sm:h-10 sm:bg-transparent sm:justify-between sm:items-center;
-    width: 420px;
-    color: #CCD6F6;
-    transition: height .1s linear
+    width: 500px;
+    transition: height .2s linear
 }
 
 .menu {
@@ -54,7 +54,7 @@ body {
     @apply flex relative justify-center text-secondary border border-secondary rounded hover:cursor-pointer hover:font-semibold;
     background-color: #0A192F;
     width: 100px;
-    transition: .1s linear;
+    transition: .2s linear;
 }
 
 .resume-download:hover {
@@ -69,7 +69,7 @@ body {
 }
 
 .tag > .tech-stack {
-    @apply mr-4 p-5 overflow-hidden relative flex flex-col mt-20 text-third-100 text-3xl rounded-md  sm:w-full lg:w-8/12 xl:w-8/12 ;  
+    @apply mr-4 p-5 overflow-hidden relative flex flex-col mt-20 text-third-100 text-3xl rounded-md  sm:w-8/12 lg:w-8/12 xl:w-6/12 ;  
     margin-left: auto;
     border: #53D3B9 1px solid;
     box-shadow: #53D3B9 0px 5px;
@@ -84,11 +84,12 @@ body {
     @apply relative bottom-3 right-3 w-full;
 }
 .about {
-    @apply container flex flex-col gap-2 pt-10;
+    @apply container flex flex-col gap-2;
 }
 .name-about {
     @apply font-bold text-sm font-Roboto;
     color: #CCD6F6;
+    transition: .2s linear;
 }
 .about p:first-child {
     @apply text-lg sm:text-xl;
@@ -96,6 +97,7 @@ body {
 }
 .about > .name-about {
     @apply text-4xl py-3 sm:text-5xl lg:text-6xl;
+    transition: .2s linear;
 }
 .about p:nth-child(3){
     @apply text-third-100 text-3xl sm:text-4xl lg:text-5xl;
@@ -136,14 +138,14 @@ body {
 }
 .languages p {
     @apply flex flex-col gap-3 items-center text-sm justify-start relative;
-    width: 105px;
-    transition: .1s linear;
+    width: 60px;
+    transition: .2s linear;
 }
 .languages > p > img {
     width: 40px;
     height: 100%;
     margin: 10px;
-    transition: .1s linear;
+    transition: .2s linear;
 }
 .languages > p > img:hover {
     transform: translate(0px, -5px)
@@ -180,7 +182,7 @@ body {
     border: 1px solid #53D3B9;
     top: -5px;
     left: -5px;
-    transition: .1s linear;
+    transition: .2s linear;
 }
 .photo-square:hover{
     transform: translate(-5px, -5px);
@@ -209,6 +211,24 @@ body {
 .projects {
     height: 100vh;
     background-color: #CCD6F6;
+}
+
+.light-mode {
+    color: #434952 !important;
+    background-color: azure;
+    transition: .2s linear;
+}
+.light-mode2 {
+    color: #022961 !important;
+    transition: .2s linear;
+}
+
+.color-mode {
+    transition: .2s linear;
+}
+
+.color-mode:hover {
+    transform: translate(0px, -5px);
 }
 
 @media only screen and (max-width : 640px){

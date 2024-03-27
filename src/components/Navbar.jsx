@@ -1,9 +1,9 @@
 import { useRef } from "react"
 
-const Navbar = () => {
+const Navbar = ({ mode, setMode }) => {
 
- 
-
+    const modeLogo = mode === 'dark' ? '/logos/bx-sun.svg' : '/logos/moon.svg'
+    const modeTooltip = mode === 'dark' ? 'Light Mode' : 'Dark Mode'
     const navRef = useRef()
 
     const menuHandler = () => {
@@ -12,15 +12,26 @@ const Navbar = () => {
 
     const showNavBar = () => {
         navRef.current.classList.toggle('small-nav')
-        console.log(navRef.current.classList)
+    }
+
+    const modeHandler = () => {
+        if(mode === 'dark'){
+            setMode('light')
+        }else{
+            setMode('dark')
+        }
     }
 
 
     return ( 
 
         <div className="nav-container" id='nav-container'>
-            <a href='#home'><div className="logo">Winston Lopez</div></a>
+            <div className="logo">
+                <button onClick={modeHandler}><img src={modeLogo} alt="dark/light" className="color-mode" title={modeTooltip}/></button>
+
+            </div>
             <nav className="menu-container" ref={navRef}>
+                <a href='#home' className="menu" onClick={showNavBar}>Home</a>
                 <a href="#about-page"><p className="menu" onClick={menuHandler}>About</p></a>
                 <a href="#projects"><p className="menu" onClick={menuHandler}>Projects</p></a>
                 <a><p onClick={menuHandler} className="menu">Contact</p></a>
