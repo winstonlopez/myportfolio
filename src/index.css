@@ -27,7 +27,7 @@ body {
 }
 
 .nav-container {
-    @apply flex justify-between items-center bg-background border-gray-200 h-20 p-2 sm:px-8  font-Inter fixed w-full top-0 left-0;
+    @apply flex justify-between items-center bg-background border-gray-200 h-20 p-2 px-4 sm:px-8  font-Inter fixed w-full top-0 left-0;
     color: #CCD6F6;
     transition: .2s linear;
     z-index: 3;
