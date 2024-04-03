@@ -28,7 +28,7 @@ const Navbar = ({ mode, setMode }) => {
         <div className="nav-container" id='nav-container'>
             <div className="logo">
                 <button onClick={modeHandler}><img src={modeLogo} alt="dark/light" className="color-mode" title={modeTooltip}/></button>
-
+ 
             </div>
             <nav className="menu-container" ref={navRef}>
                 <a href='#home' className="menu" onClick={showNavBar}>Home</a>

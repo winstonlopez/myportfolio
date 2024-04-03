@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   width="24"
-   height="24"
    viewBox="0 0 24 24"
+   fill="#808"
    version="1.1"
    id="svg4"
-   sodipodi:docname="bxl-tailwind-css.svg"
+   sodipodi:docname="chevron.svg"
    inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -24,8 +23,8 @@
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
      inkscape:zoom="34.875"
-     inkscape:cx="10.781362"
-     inkscape:cy="12.014337"
+     inkscape:cx="6.8817204"
+     inkscape:cy="11.641577"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="-8"
@@ -33,7 +32,7 @@
      inkscape:window-maximized="1"
      inkscape:current-layer="svg4" />
   <path
-     d="M18.5 9.51a4.22 4.22 0 0 1-1.91-1.34A5.77 5.77 0 0 0 12 6a4.72 4.72 0 0 0-5 4 3.23 3.23 0 0 1 3.5-1.49 4.32 4.32 0 0 1 1.91 1.35A5.77 5.77 0 0 0 17 12a4.72 4.72 0 0 0 5-4 3.2 3.2 0 0 1-3.5 1.51zm-13 4.98a4.22 4.22 0 0 1 1.91 1.34A5.77 5.77 0 0 0 12 18a4.72 4.72 0 0 0 5-4 3.23 3.23 0 0 1-3.5 1.49 4.32 4.32 0 0 1-1.91-1.35A5.8 5.8 0 0 0 7 12a4.72 4.72 0 0 0-5 4 3.2 3.2 0 0 1 3.5-1.51z"
+     d="M 23.238608,11.710077 0.61802356,20.50697 5.6448199,11.710077 0.61802356,2.913182 Z"
      id="path2"
-     style="fill:#38bdf8;fill-opacity:1" />
+     style="fill:#53ca8d;fill-opacity:1;stroke-width:1.2567" />
 </svg>

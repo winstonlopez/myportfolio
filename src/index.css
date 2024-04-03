@@ -21,14 +21,14 @@ body {
 }
 
 .main {
+    @apply sm:px-4 relative;
     scroll-behavior: smooth;
     transition: .2s linear;
     width: 100%;
 }
 
 .nav-container {
-    @apply flex justify-between items-center bg-background border-gray-200 h-20 p-2 px-4 sm:px-8  font-Inter fixed w-full top-0 left-0;
-    color: #CCD6F6;
+    @apply flex justify-between items-center bg-background border-gray-200 h-20 p-2 px-2 sm:px-4 lg:px-4  font-Inter fixed w-full top-0 left-0;
     transition: .2s linear;
     z-index: 3;
 }
@@ -64,22 +64,28 @@ body {
 
 
 .tag {
-    @apply flex justify-start flex-col mx-3 items-start font-Inter mt-8 gap-6 text-primary pt-20 lg:justify-start lg:m-10 xl:m-20;
+    @apply flex justify-start flex-col mx-3 items-start font-Inter sm:mx-20 mt-8 gap-6 text-primary pt-20 lg:justify-start lg:mx-32 xl:mx-32;
     min-height: calc(100vh - 80px)
 }
 
 .tag > .tech-stack {
-    @apply mr-4 p-5 overflow-hidden relative flex flex-col mt-20 text-third-100 text-3xl rounded-md  sm:w-8/12 lg:w-8/12 xl:w-6/12 ;  
-    margin-left: auto;
+    @apply mr-4 p-5 overflow-hidden relative flex flex-col mt-20 text-third-100 rounded-md  sm:w-full lg:w-full xl:w-8/12 ;
+    margin-right: auto;
     border: #53D3B9 1px solid;
     box-shadow: #53D3B9 0px 5px;
     /* background-color: rgba(83,211,185,.2); */
 }
 .tech-stack > p {
-    text-align: center;
-    font-size: 70%;
-
+    text-align: left;
+    font-size: 1.3em;
+    border-bottom: 1px solid lightgray;
 }
+.tech-stack > ul {
+    font-size: .9em;
+    @apply list-image-[url(/buttons/chevron.svg)] columns-2 sm:columns-2 p-3 lg:columns-3;
+}
+
+
 .photo > img {
     @apply relative bottom-3 right-3 w-full;
 }
@@ -89,7 +95,7 @@ body {
 .name-about {
     @apply font-bold text-sm font-Roboto;
     color: #CCD6F6;
-    transition: .2s linear;
+
 }
 .about p:first-child {
     @apply text-lg sm:text-xl;
@@ -97,7 +103,7 @@ body {
 }
 .about > .name-about {
     @apply text-4xl py-3 sm:text-5xl lg:text-6xl;
-    transition: .2s linear;
+
 }
 .about p:nth-child(3){
     @apply text-third-100 text-3xl sm:text-4xl lg:text-5xl;
@@ -108,16 +114,16 @@ body {
 }
 
 .about-page {
-    @apply pt-10 sm:pt-12 sm:px-10 sm:mx-0 lg:pt-10 lg:px-14 xl:pt-20 xl:px-36 flex items-start justify-evenly gap-8;
+    @apply pt-10 sm:pt-12 sm:px-10 sm:mx-4 lg:pt-10 lg:px-14 xl:pt-20 xl:px-36 flex items-start justify-evenly gap-8;
     min-height: calc(100vh);
 }
 
 
 .about-description {
-    @apply container pt-10;
+    @apply container pt-10  sm:ml-6;
 }
 .whole-description {
-    @apply flex flex-col gap-10 sm:flex-row;
+    @apply flex flex-col gap-10 lg:flex-row;
 }
 .text-description {
     @apply flex flex-col gap-5;
@@ -213,13 +219,21 @@ body {
     background-color: #CCD6F6;
 }
 
+.dark-mode {
+    background-color: #0A192F;
+    @apply text-primary;
+}
+
 .light-mode {
     color: #434952 !important;
     background-color: azure;
     transition: .2s linear;
 }
+.transparent-bg {
+    background-color: transparent;
+}
 .light-mode2 {
-    color: #022961 !important;
+    color:#CCD6F6;
     transition: .2s linear;
 }
 
@@ -229,6 +243,56 @@ body {
 
 .color-mode:hover {
     transform: translate(0px, -5px);
+}
+
+.icons {
+    @apply  hidden fixed left-8 sm:flex flex-col gap-6;
+    bottom: 0px;
+    height: 450px;
+    width: 30px;
+}
+.icons img {
+    width: 25px;
+    margin: auto;
+    transition: .2s;
+}
+
+.icons img:hover {
+    cursor: pointer;
+    transform: translate(0px, -4px);
+    fill: #53D3B9;
+}
+
+.icons > a {
+    @apply hover:cursor-pointer;
+}
+
+.icons::after {
+    font-size: .1em;
+    content: "";
+    border: 1px solid #8892B0;
+    width: 1px;
+    height: 100%;
+    transform: translate(15px, 0px);
+}
+
+.gmail {
+    @apply hidden sm:flex fixed gap-3 mr-5;
+    right: 0px;
+    bottom: 0px;
+    height: 600px;
+    color: #CCD6F6;
+    writing-mode: vertical-lr;
+    text-orientation: sideways;
+    width: 30px;
+    letter-spacing: 3px;
+}
+.gmail::after {
+    content: '';
+    border: 1px solid #8892B0;
+    width: 1px;
+    height: 100%;
+    transform: translate(10px, 0px);
 }
 
 @media only screen and (max-width : 640px){

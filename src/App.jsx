@@ -6,6 +6,8 @@ import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Home from './components/Home'
 import { useRef, useEffect, useState } from 'react'
+import Socials from './components/Socials'
+import Gmail from './components/Gmail'
 
 
 
@@ -17,7 +19,6 @@ function App() {
 
   useEffect(() => {  //scroll behavior for navbar
     const nav = mainRef.current.querySelector('#nav-container')
-    const smallMenu = document.querySelector('.small-nav')
     const menuContainer = document.querySelector('.menu-container')
     
 
@@ -66,8 +67,11 @@ function App() {
     const aboutP = document.querySelector(".about-description > div")
     const pTag = document.querySelector(".about p:last-child")
     const teal = document.querySelector('.about p:first-child')
+    const tech = document.querySelector('.tech-stack')
+    const gmail = document.querySelector('.gmail')
 
     const lights = document.querySelectorAll('.light-mode')
+
 
     const lightMode = () => {
       main.classList.add('light-mode')
@@ -76,7 +80,9 @@ function App() {
       about.classList.add('light-mode')
       aboutP.classList.add('light-mode')
       pTag.classList.add('light-mode')
-      teal.classList.add('light-mode2')
+      teal.classList.add('light-mode')
+      tech.classList.add('light-mode')
+      gmail.classList.add('light-mode', 'transparent-bg')
     }
 
     const darkMode = () => {
@@ -90,7 +96,9 @@ function App() {
   }, [mode])
 
   return (
-    <div className='main' ref={mainRef}>
+    <div className='main dark-mode' ref={mainRef}>
+      <Socials mode={mode}/>
+      <Gmail mode={mode}/>
       <Navbar setMode={setMode} mode={mode}/>
       <Home />
       <About />
