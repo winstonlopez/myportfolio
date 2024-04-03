@@ -41,17 +41,23 @@ body {
 }
 .menu-container {
     @apply hidden sm:relative sm:flex sm:h-10 sm:bg-transparent sm:justify-between sm:items-center;
-    width: 500px;
+    width: 600px;
     transition: height .2s linear
 }
 
 .menu {
-    @apply flex justify-center text-right hover:cursor-pointer sm:text-center hover:text-secondary hover:font-semibold;
-    width: 100px;
+    @apply flex justify-center text-right hover:cursor-pointer sm:text-center hover:text-secondary text-sm;
+    width: 120px;
+}
+
+.number {
+    @apply font-mono;
+    color: #53D3B9;
+    margin-right: 8px;
 }
 
 .resume-download {
-    @apply flex relative justify-center text-secondary border border-secondary rounded hover:cursor-pointer hover:font-semibold;
+    @apply flex relative justify-center text-secondary border border-secondary rounded hover:cursor-pointer hover:font-semibold text-sm;
     background-color: #0A192F;
     width: 100px;
     transition: .2s linear;
@@ -64,7 +70,7 @@ body {
 
 
 .tag {
-    @apply flex justify-start flex-col mx-3 items-start font-Inter sm:mx-20 mt-8 gap-6 text-primary pt-20 lg:justify-start lg:mx-32 xl:mx-32;
+    @apply flex justify-start flex-col mx-3 items-start font-Inter sm:mx-20 gap-6 text-primary pt-20 lg:justify-start lg:mx-32 xl:ml-80 xl:pt-44;
     min-height: calc(100vh - 80px)
 }
 
@@ -72,13 +78,12 @@ body {
     @apply mr-4 p-5 overflow-hidden relative flex flex-col mt-20 text-third-100 rounded-md  sm:w-full lg:w-full xl:w-8/12 ;
     margin-right: auto;
     border: #53D3B9 1px solid;
-    box-shadow: #53D3B9 0px 5px;
-    /* background-color: rgba(83,211,185,.2); */
+   
 }
 .tech-stack > p {
     text-align: left;
     font-size: 1.3em;
-    border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid #8892B0;
 }
 .tech-stack > ul {
     font-size: .9em;
@@ -120,8 +125,10 @@ body {
 
 
 .about-description {
-    @apply container pt-10  sm:ml-6;
+    @apply container pt-10  sm:ml-6 xl:mx-32;
 }
+
+
 .whole-description {
     @apply flex flex-col gap-10 lg:flex-row;
 }
@@ -136,6 +143,15 @@ body {
 
 .about-description > p:first-child {
     @apply text-primary text-2xl py-4;
+}
+
+.line {
+    height: 1px;
+    width: 60%;
+    display: inline-block;
+    border: 1px solid #44454b;
+    margin-left: 10px;
+    transform: translate(0px, -5px)
 }
 
 .languages {
@@ -215,8 +231,8 @@ body {
 }
 
 .projects {
+    @apply pt-24 px-2 sm:px-24 lg:px-24 xl:px-72;
     height: 100vh;
-    background-color: #CCD6F6;
 }
 
 .dark-mode {

@@ -31,10 +31,10 @@ const Navbar = ({ mode, setMode }) => {
  
             </div>
             <nav className="menu-container" ref={navRef}>
-                <a href='#home' className="menu" onClick={showNavBar}>Home</a>
-                <a href="#about-page"><p className="menu" onClick={menuHandler}>About</p></a>
-                <a href="#projects"><p className="menu" onClick={menuHandler}>Projects</p></a>
-                <a><p onClick={menuHandler} className="menu">Contact</p></a>
+                <a href='#home' className="menu" onClick={showNavBar}><span className="number">01.</span>Home</a>
+                <a href="#about-page"><p className="menu" onClick={menuHandler}><span className="number">02.</span>About</p></a>
+                <a href="#projects"><p className="menu" onClick={menuHandler}><span className="number">03.</span>Projects</p></a>
+                <a><p onClick={menuHandler} className="menu"><span className="number">04.</span>Contact</p></a>
                 <div className="backshadow">
                     <div className="resume-download" onClick={menuHandler}>Resume</div>
                 </div>

@@ -21,7 +21,7 @@ const About = () => {
     return ( 
         <div className="about-page" id='about-page'>
             <div className="about-description">
-                <p><span>About Me</span>
+                <p><span><span className='number'>01.</span>About Me</span>
                     <span className="line"></span>
                 </p>
                 <div className="whole-description">
