@@ -57,9 +57,10 @@ body {
 }
 
 .resume-download {
-    @apply flex relative justify-center text-secondary border border-secondary rounded hover:cursor-pointer hover:font-semibold text-sm;
+    @apply flex relative justify-center items-center text-secondary border border-secondary rounded hover:cursor-pointer hover:font-semibold text-sm;
     background-color: #0A192F;
     width: 100px;
+    height: 35px;
     transition: .2s linear;
 }
 
@@ -70,8 +71,9 @@ body {
 
 
 .tag {
-    @apply flex justify-start flex-col mx-3 items-start font-Inter sm:mx-20 gap-6 text-primary pt-20 lg:justify-start lg:mx-32 xl:ml-80 xl:pt-44;
-    min-height: calc(100vh - 80px)
+    @apply flex justify-start flex-col mx-3 items-start font-Inter sm:mx-20 gap-6 text-primary pt-20 lg:justify-start lg:mx-32 xl:ml-80 xl:pt-44 bg-transparent;
+    min-height: calc(100vh - 80px);
+    transition: .1s linear;
 }
 
 .tag > .tech-stack {
@@ -103,18 +105,18 @@ body {
 
 }
 .about p:first-child {
-    @apply text-lg sm:text-xl;
+    @apply text-lg sm:text-xl bg-transparent;
     color: #53D3B9;
 }
 .about > .name-about {
-    @apply text-4xl py-3 sm:text-5xl lg:text-6xl;
+    @apply text-4xl py-3 sm:text-5xl lg:text-6xl bg-transparent;
 
 }
 .about p:nth-child(3){
-    @apply text-third-100 text-3xl sm:text-4xl lg:text-5xl;
+    @apply text-third-100 text-3xl sm:text-4xl lg:text-5xl bg-transparent;
 }
 .about p:last-child {
-    @apply text-third-200 py-2;
+    @apply text-third-200 py-2 bg-transparent;
     max-width: 60%;
 }
 
@@ -125,24 +127,24 @@ body {
 
 
 .about-description {
-    @apply container pt-10  sm:ml-6 xl:mx-32;
+    @apply container pt-10  sm:ml-6 xl:mx-32 bg-transparent;
 }
 
 
 .whole-description {
-    @apply flex flex-col gap-10 lg:flex-row;
+    @apply flex flex-col gap-10 lg:flex-row bg-transparent;
 }
 .text-description {
-    @apply flex flex-col gap-5;
+    @apply flex flex-col gap-5 bg-transparent;
 }
 
 .about-description > div {
-    @apply text-third-100 text-justify text-lg py-2;
+    @apply text-third-100 text-justify text-lg py-2 bg-transparent;
 }
 
 
 .about-description > p:first-child {
-    @apply text-primary text-2xl py-4;
+    @apply text-primary text-2xl py-4 bg-transparent;
 }
 
 .line {
@@ -191,6 +193,7 @@ body {
 
 .backshadow {
     @apply bg-secondary rounded relative;
+    height: 35px;
 }
 
 .photo-container {

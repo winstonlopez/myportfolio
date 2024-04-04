@@ -5,7 +5,7 @@ const Home = () => {
  
 
     return ( 
-        <div className="tag" id="home">
+        <div className="tag transparent-bg" id="home">
             <div className="about">
                 <p>Hi, my name is</p> 
                 <h2 className="name-about">Winston Lopez.</h2>
