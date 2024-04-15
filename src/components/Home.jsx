@@ -10,7 +10,7 @@ const Home = () => {
                 <p>Hi, my name is</p> 
                 <h2 className="name-about">Winston Lopez.</h2>
                 <p>I build things for the Web</p>
-                <p>I'm a self-taught Software developer creating responsive websites and applications for interesting projects and ideas.</p>
+                <p>I&apos;m a self-taught Software developer creating responsive websites and applications for interesting projects and ideas.</p>
             </div>
             <div className="tech-stack">
                 <p>Skills and Technologies</p>
@@ -24,6 +24,7 @@ const Home = () => {
                     <li>TypeScript</li>
                     <li>ExpressJS</li>
                     <li>Tailwind-CSS</li>
+                    <li>Git</li>
                 </ul>
             </div>
         </div>

@@ -1,4 +1,5 @@
 import { useRef } from "react"
+import PropTypes from 'prop-types'
 
 const Navbar = ({ mode, setMode }) => {
 
@@ -59,6 +60,11 @@ const Navbar = ({ mode, setMode }) => {
         </div>
 
      )
+}
+
+Navbar.propTypes = {
+    mode: PropTypes.string,
+    setMode: PropTypes.func
 }
  
 export default Navbar

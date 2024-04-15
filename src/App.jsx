@@ -69,6 +69,7 @@ function App() {
     const teal = document.querySelector('.about p:first-child')
     const tech = document.querySelector('.tech-stack')
     const gmail = document.querySelector('.gmail')
+ 
 
     const lights = document.querySelectorAll('.light-mode')
 
@@ -83,6 +84,7 @@ function App() {
       teal.classList.add('light-mode')
       tech.classList.add('light-mode')
       gmail.classList.add('light-mode', 'transparent-bg')
+
     }
 
     const darkMode = () => {
