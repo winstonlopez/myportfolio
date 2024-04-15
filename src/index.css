@@ -42,7 +42,6 @@ body {
 .menu-container {
     @apply hidden sm:relative sm:flex sm:h-10 sm:bg-transparent sm:justify-between sm:items-center;
     width: 600px;
-    transition: height .2s linear
 }
 
 .menu {
@@ -318,11 +317,13 @@ body {
     .small-nav {
         @apply absolute top-14 bg-menu text-gray-100 px-5 py-2 gap-4;
         display: flex;
+        overflow: hidden;
         flex-direction: column;
         align-items: flex-end;
         width: calc(100% + 16px);
         left: -8px;
     }
+
 
     .about-page {
         @apply px-3 py-8;

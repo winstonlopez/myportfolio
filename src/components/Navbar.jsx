@@ -11,7 +11,23 @@ const Navbar = ({ mode, setMode }) => {
     }
 
     const showNavBar = () => {
-        navRef.current.classList.toggle('small-nav')
+        if(navRef.current.classList.value.split(' ').includes('small-nav')){
+                navRef.current.style.height = '0px'
+                setTimeout(() => {
+                    navRef.current.classList.remove('small-nav')
+                }, 201)
+
+        }else{
+                navRef.current.classList.add('small-nav')
+                navRef.current.style.height = '0px'
+                navRef.current.style.transition = 'height .2s linear'
+                setTimeout(() => {
+                    navRef.current.style.height = '200px'
+                }, 1)
+   
+        }
+
+
     }
 
     const modeHandler = () => {
