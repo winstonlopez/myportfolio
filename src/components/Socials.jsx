@@ -8,6 +8,7 @@ const Socials = ({ mode }) => {
     const insta = mode === 'dark' ? "/logos/instagram.svg" : "/logos/instagram-light.svg"
     const gmail = mode === 'dark' ? "/logos/gmail.svg" : "/logos/gmail-light.svg"
     const facebook = mode === 'dark' ? "/logos/facebook.svg" : "/logos/facebook-light.svg"
+    
     return ( 
         <div className="icons">
             <a href="https://github.com/winstonlopez" target="#"><img src={github} alt="github" /></a>

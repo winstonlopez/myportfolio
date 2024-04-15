@@ -304,6 +304,11 @@ body {
     text-orientation: sideways;
     width: 30px;
     letter-spacing: 3px;
+    transition: .1s linear;
+}
+.gmail:hover{
+    @apply text-secondary;
+    transform: translate(0px, -5px);
 }
 .gmail::after {
     content: '';
