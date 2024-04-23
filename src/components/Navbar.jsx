@@ -27,8 +27,6 @@ const Navbar = ({ mode, setMode }) => {
                 }, 1)
    
         }
-
-
     }
 
     const modeHandler = () => {
@@ -53,7 +51,7 @@ const Navbar = ({ mode, setMode }) => {
                 <a href="#projects"><p className="menu" onClick={menuHandler}><span className="number">03.</span>Projects</p></a>
                 <a><p onClick={menuHandler} className="menu"><span className="number">04.</span>Contact</p></a>
                 <div className="backshadow">
-                    <div className="resume-download" onClick={menuHandler}>Resume</div>
+                    <div className="resume-download" onClick={menuHandler}><a href="/docs/WinstonLopez.pdf" target="_blank">Resume</a></div>
                 </div>
             </nav>
             <img src="/buttons/bx-menu.svg" alt="menu" className="sm:hidden hover:cursor-pointer" onClick={showNavBar}/>

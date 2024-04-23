@@ -329,12 +329,14 @@ body {
 
 .project-banner {
     @apply mt-8 absolute sm:text-right left-0 sm:right-0 flex flex-col items-start sm:items-end;
+    width: 80%;
+    margin-left: auto;
     height: fit-content;
     z-index: 2;
 }
 .project-banner p {
     background-color: rgba(17, 34, 64, 1);
-    @apply mt-2 p-10 rounded-lg w-full sm:w-2/3 text-third-100;
+    @apply mt-2 p-10 rounded-lg w-full text-third-100;
 }
 .tech-used {
     @apply mt-4 flex w-full sm:w-2/3 sm:right-3 items-center justify-start sm:justify-end gap-10;
