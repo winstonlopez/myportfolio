@@ -37,7 +37,7 @@ const About = () => {
 
                     <div className="photo-container" ref={photoContainer}>
                         <div className="photo-square" ref={photoRef}>
-                        {/* <img src="/images/myphoto.jpg" alt="" /> */}
+                        <img src="/images/dp.png" alt="" loading='lazy'/>
                         </div>
                         <div className="backframe" ref={backgroundRef}></div>
                      </div>

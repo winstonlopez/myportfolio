@@ -204,11 +204,14 @@ body {
 }
 
 .photo-square {
-    @apply w-full h-full bg-secondary absolute;
+    @apply w-full h-full bg-secondary absolute overflow-hidden;
     border: 1px solid #53D3B9;
     top: -5px;
     left: -5px;
     transition: .2s linear;
+}
+.photo-square img {
+    @apply object-cover;
 }
 .photo-square:hover{
     transform: translate(-5px, -5px);
@@ -229,14 +232,14 @@ body {
 }
 
 .footer {
-    height: 400px;
-    background-color: #53D3B9;
+    @apply flex items-center justify-center;
     width: 100%;
 }
 
 .projects {
     @apply pt-24 px-2 sm:px-24 lg:px-24 xl:px-72;
     min-height: 100vh;
+    height: fit-content;
 }
 
 .dark-mode {
@@ -319,30 +322,56 @@ body {
     height: 100%;
     transform: translate(10px, 0px);
 }
+.contact-container {
+    @apply h-full flex items-center justify-center flex-col mx-3 sm:mx-5 px-3 text-justify sm:px-10 lg:w-3/4 xl:w-1/2 lg:m-auto text-gray-400;
+    min-height: 100vh;
+}
+.contact-container > div:first-child {
+    @apply text-3xl mb-5;
+}
+.contact-container > div:nth-child(2) {
+    @apply text-secondary text-xl mb-3;
+}
 .green {
     @apply text-secondary;
 }
+.project-main-container {
+    @apply relative;
+}
 
 .project-container {
-    @apply flex flex-col sm:flex-row relative h-full mt-4 pt-10;
+    @apply flex flex-col sm:flex-row relative mt-4 pt-10;
 }
 
 .project-banner {
-    @apply mt-8 absolute sm:text-right left-0 sm:right-0 flex flex-col items-start sm:items-end;
-    width: 80%;
+    @apply mt-8 relative w-full sm:w-3/4 sm:text-right left-0 sm:right-0 flex flex-col items-start sm:items-end;
     margin-left: auto;
     height: fit-content;
     z-index: 2;
 }
+
+.project-banner2 {
+    @apply mt-8 relative sm:text-left left-0 flex flex-col items-start w-full sm:w-3/4;
+    margin-right: auto;
+    height: fit-content;
+    z-index: 2;
+}
+
 .project-banner p {
     background-color: rgba(17, 34, 64, 1);
     @apply mt-2 p-10 rounded-lg w-full text-third-100;
 }
+
+.project-banner2 p {
+    background-color: rgba(17, 34, 64, 1);
+    @apply mt-2 p-10 rounded-lg w-full text-third-100;
+}
+
 .tech-used {
-    @apply mt-4 flex w-full sm:w-2/3 sm:right-3 items-center justify-start sm:justify-end gap-10;
+    @apply mt-4 flex w-full sm:right-3 items-center justify-start sm:justify-end gap-10;
 }
 .project-links {
-    @apply mt-4 flex w-full sm:w-2/3 sm:right-3 items-center justify-start sm:justify-end gap-10;
+    @apply mt-4 flex w-full sm:right-3 items-center justify-start sm:justify-end gap-10;
     bottom: 0;
 }
 .project-links img {
@@ -378,6 +407,11 @@ body {
 }
 .filter:hover {
     background-color: rgba(17, 34, 64, .5);
+}
+.contact-me {
+    @apply h-12 border w-32 flex items-center justify-center mt-6 hover:cursor-pointer hover:-translate-y-1 font-mono;
+    transition: .2s linear;
+    border-color: #53D3B9;
 }
 
 @media only screen and (max-width : 640px){

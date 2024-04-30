@@ -1,7 +1,7 @@
 const Footer = () => {
     return ( 
         <div className="footer" id="footerId">
-            footer here
+            Designed and Built by Winston Lopez
         </div>
      )
 }

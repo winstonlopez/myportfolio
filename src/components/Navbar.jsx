@@ -49,7 +49,7 @@ const Navbar = ({ mode, setMode }) => {
                 <a href='#home' className="menu" onClick={showNavBar}><span className="number">01.</span>Home</a>
                 <a href="#about-page"><p className="menu" onClick={menuHandler}><span className="number">02.</span>About</p></a>
                 <a href="#projects"><p className="menu" onClick={menuHandler}><span className="number">03.</span>Projects</p></a>
-                <a><p onClick={menuHandler} className="menu"><span className="number">04.</span>Contact</p></a>
+                <a href="#contact"><p onClick={menuHandler} className="menu"><span className="number">04.</span>Contact</p></a>
                 <div className="backshadow">
                     <div className="resume-download" onClick={menuHandler}><a href="/docs/WinstonLopez.pdf" target="_blank">Resume</a></div>
                 </div>
